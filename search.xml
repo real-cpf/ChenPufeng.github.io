@@ -49,4 +49,33 @@
         <tag>test</tag>
       </tags>
   </entry>
+  <entry>
+    <title>os-hello-os</title>
+    <url>/2020/06/15/os-hello-os/</url>
+    <content><![CDATA[<h2 id="初识操作系统"><a href="#初识操作系统" class="headerlink" title="初识操作系统"></a>初识操作系统</h2><p> <code>本文主要介绍笔者对操作系统最初的认识，大多是感性的，借鉴性不强，可以略过。</code></p>
+<p>笔者再了解计算机之前对计算机有种莫名的崇拜，在刚刚知道操作系统这个名词时，也是这种感觉。</p>
+<p>我最初有意识认识到的操作系统是MTKOS，也就是凯斯系统，现在好像成为冒泡OS。</p>
+<p>总之，当时我是在玩儿一个功能机，但不知为何找到了一个冒泡社区，后来就开始了操作系统的折腾。</p>
+<p>当时的折腾也没有碰到内核，其实就是通过一个工程指令，打开冒泡社区。当时觉得比较酷的一次操作是，通过替换了一个文件，使得冒泡社区打开后成了iPhone那种滑动屏幕，然后可以在这个桌面上添加各种应用。其实就是把相应的文件放在规定的位置，桌面就能扫描出来了。</p>
+]]></content>
+      <categories>
+        <category>os</category>
+      </categories>
+      <tags>
+        <tag>os</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>os-know-os</title>
+    <url>/2020/06/15/os-know-os/</url>
+    <content><![CDATA[<h2 id="认识操作系统（一）"><a href="#认识操作系统（一）" class="headerlink" title="认识操作系统（一）"></a>认识操作系统（一）</h2><p><img src="/home/ljc/Documents/my-blob/blob/source/_posts/os-know-os.assets/image-20200615183918527.png" alt="image-20200615183918527"></p>
+<p><code>本篇将着重与上面几点进行关注</code></p>
+]]></content>
+      <categories>
+        <category>os</category>
+      </categories>
+      <tags>
+        <tag>os</tag>
+      </tags>
+  </entry>
 </search>
