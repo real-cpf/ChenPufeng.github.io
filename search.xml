@@ -4,7 +4,9 @@
     <title>Hello World</title>
     <url>/2020/06/15/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+
+<h2 id="Hexo-Quick-Start"><a href="#Hexo-Quick-Start" class="headerlink" title="Hexo Quick Start"></a>Hexo Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
@@ -27,7 +29,9 @@
   <entry>
     <title>os-1</title>
     <url>/2020/06/15/os-1/</url>
-    <content><![CDATA[<h2 id="这个一个关于操作系统的系列，主要以笔者使用操作系统的感悟体验为先。"><a href="#这个一个关于操作系统的系列，主要以笔者使用操作系统的感悟体验为先。" class="headerlink" title="这个一个关于操作系统的系列，主要以笔者使用操作系统的感悟体验为先。"></a>这个一个关于操作系统的系列，主要以笔者使用操作系统的感悟体验为先。</h2><ul>
+    <content><![CDATA[<h2 id="这个一个关于操作系统的系列，主要以笔者使用操作系统的感悟体验为先。"><a href="#这个一个关于操作系统的系列，主要以笔者使用操作系统的感悟体验为先。" class="headerlink" title="这个一个关于操作系统的系列，主要以笔者使用操作系统的感悟体验为先。"></a>这个一个关于操作系统的系列，主要以笔者使用操作系统的感悟体验为先。</h2><a id="more"></a>
+
+<ul>
 <li>起初使用的是window</li>
 <li>开始接触linux</li>
 <li>尝试不同的linux发行版</li>
@@ -38,13 +42,16 @@
         <category>os</category>
       </categories>
       <tags>
-        <tag>os</tag>
+        <tag>序言</tag>
       </tags>
   </entry>
   <entry>
     <title>post-one</title>
     <url>/2020/06/15/post-one/</url>
-    <content><![CDATA[<h2 id="经过测试，发现新增文章要用posts"><a href="#经过测试，发现新增文章要用posts" class="headerlink" title="经过测试，发现新增文章要用posts"></a>经过测试，发现新增文章要用posts</h2>]]></content>
+    <content><![CDATA[<h2 id="经过测试，发现新增文章要用posts"><a href="#经过测试，发现新增文章要用posts" class="headerlink" title="经过测试，发现新增文章要用posts"></a>经过测试，发现新增文章要用posts</h2><a id="more"></a>
+
+<p>nothing</p>
+]]></content>
       <tags>
         <tag>test</tag>
       </tags>
@@ -53,32 +60,175 @@
     <title>os-hello-os</title>
     <url>/2020/06/15/os-hello-os/</url>
     <content><![CDATA[<h2 id="初识操作系统"><a href="#初识操作系统" class="headerlink" title="初识操作系统"></a>初识操作系统</h2><p> <code>本文主要介绍笔者对操作系统最初的认识，大多是感性的，借鉴性不强，可以略过。</code></p>
+<a id="more"></a>
+
 <p>笔者再了解计算机之前对计算机有种莫名的崇拜，在刚刚知道操作系统这个名词时，也是这种感觉。</p>
 <p>我最初有意识认识到的操作系统是MTKOS，也就是凯斯系统，现在好像成为冒泡OS。</p>
 <p>总之，当时我是在玩儿一个功能机，但不知为何找到了一个冒泡社区，后来就开始了操作系统的折腾。</p>
 <p>当时的折腾也没有碰到内核，其实就是通过一个工程指令，打开冒泡社区。当时觉得比较酷的一次操作是，通过替换了一个文件，使得冒泡社区打开后成了iPhone那种滑动屏幕，然后可以在这个桌面上添加各种应用。其实就是把相应的文件放在规定的位置，桌面就能扫描出来了。</p>
+<p>emm，这就是我与操作系统的初体验了。</p>
 ]]></content>
       <categories>
         <category>os</category>
       </categories>
       <tags>
-        <tag>os</tag>
+        <tag>序言</tag>
       </tags>
   </entry>
   <entry>
-    <title>os-know-os</title>
-    <url>/2020/06/15/os-know-os/</url>
-    <content><![CDATA[<h2 id="认识操作系统（一）"><a href="#认识操作系统（一）" class="headerlink" title="认识操作系统（一）"></a>认识操作系统（一）</h2><img src="/2020/06/15/os-know-os/image-20200615183918527.png" class="" title="This is an example image">
+    <title>认识操作系统（一）</title>
+    <url>/2020/06/15/%E8%AE%A4%E8%AF%86%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="认识操作系统（一）"><a href="#认识操作系统（一）" class="headerlink" title="认识操作系统（一）"></a>认识操作系统（一）</h2><p>本文将初步认识操作系统</p>
+<a id="more"></a>
+
+
+<img src="/2020/06/15/%E8%AE%A4%E8%AF%86%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%88%E4%B8%80%EF%BC%89/image-20200615183918527.png" class="" title="本篇对于操作系统的关注点">
 
 
 
 <p><code>本篇将着重与上面几点进行关注</code></p>
+<blockquote>
+<p>认识操作系统系列参考书籍 <a href="https://legacy.gitbook.com/book/wizardforcel/think-os/details" target="_blank" rel="noopener">https://legacy.gitbook.com/book/wizardforcel/think-os/details</a></p>
+</blockquote>
+<h3 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h3><p>进程是资源分配的基本单位。</p>
+<p>PCB作为进程的管理块保持着进程的基本信息与运行状态。</p>
+<p>在linux下，这个块使用<code>task_struct</code>表示</p>
+<p>结构体中的基本元素有：</p>
+<blockquote>
+<p>标识符：与进程相关的唯一标识符，用来区别正在执行的进程和其他进程。<br>状态：描述进程的状态，因为进程有挂起，阻塞，运行等好几个状态，所以都有个标识符来记录进程的执行状态。<br>优先级：如果有好几个进程正在执行，就涉及到进程被执行的先后顺序的问题，这和进程优先级这个标识符有关。<br>程序计数器：程序中即将被执行的下一条指令的地址。<br>内存指针：程序代码和进程相关数据的指针。<br>上下文数据：进程执行时处理器的寄存器中的数据。<br>I/O状态信息：包括显示的I/O请求，分配给进程的I/O设备和被进程使用的文件列表等。<br>记账信息：包括处理器的时间总和，记账号等等。</p>
+<hr>
+<p>原文链接：<a href="https://blog.csdn.net/bit_clearoff/java/article/details/54292300" target="_blank" rel="noopener">https://blog.csdn.net/bit_clearoff/java/article/details/54292300</a></p>
+</blockquote>
+<p><code>fork()</code></p>
+<p><code>（通过复制调用生成一个新的进程）创建一个子进程。
+   对于父进程来说，fork()的返回值是子进程的pid
+   对于子进程来说，fork()的返回值是0</code></p>
+<h3 id="多任务"><a href="#多任务" class="headerlink" title="多任务"></a>多任务</h3><ul>
+<li><p>编写了一个监控程序，如果发现某个程序暂时无须使用 CPU 时，监控程序就把另外的正在等待 CPU 资源的程序启动起来，以充分利用 CPU 资源。这种方法被称为 <strong>多道程序（Multiprogramming）</strong></p>
+</li>
+<li><p>使得每个程序运行一段时间之后，都主动让出 CPU 资源，这样每个程序在一段时间内都有机会运行一小段时间,这种程序协作方式被称为 <strong>分时系统（Time-Sharing System）</strong></p>
+</li>
+<li><p>如果操作系统分配给各个进程的运行时间都很短，CPU 可以在多个进程间快速切换，就像很多进程都同时在运行的样子。也就是我们现在很熟悉的 <strong>多任务（Multi-tasking）系统</strong></p>
+</li>
+<li><p>中断 </p>
+<blockquote>
+<ol>
+<li>当中断发生时,硬件将程序计数器保存到一个特殊的寄存器中,并且跳到合适的中断处<br>理器。</li>
+<li>中断处理器将程序计数器和位寄存器,以及任何打算使用的数据寄存器的内容储存到内<br>存中。</li>
+<li>中断处理器运行处理中断所需的代码。</li>
+<li>之后它复原所保存寄存器的内容。最后,复原被中断进程的程序计数器,这会跳回到被<br>中断的进程。</li>
+</ol>
+</blockquote>
+</li>
+<li><p>上下文切换</p>
+<blockquote>
+<p>但是当中断发生时,内核并不总会恢复被中断的进程。它可以选择切换到其它进程,这种机制叫做“上下文切换”。</p>
+</blockquote>
+</li>
+<li><p>生命周期</p>
+<blockquote>
+<ul>
+<li>运行(Running),如果进程正在运行于某个核心上。<br>就绪(Ready),如果进程可以但没有运行,通常由于就绪进程数量大于内核的数量。</li>
+<li>阻塞(Blocked),如果进程由于正在等待未来的事件,例如网络通信或磁盘读取,而不能运行。</li>
+<li>终止(Done):如果进程运行完毕,但是带有没有读取的退出状态信息。</li>
+<li>一个进程在运行中的程序执行类似于fork的系统调用时诞生。在系统调用的末尾,新的进程通常就绪。之后调度器可能恢复原有的进程(“父进程”),或者启动新的进程(“子进程”)。</li>
+<li>当一个进程由调度器启动或恢复时,它的状态从就绪变为运行。</li>
+<li>当一个进程被中断,并且调度器没有选择使它恢复,它的状态从运行变成就绪。</li>
+<li>如果一个进程执行不能立即完成的系统调用,例如磁盘请求,它会变为阻塞,并且调度器会选择另一个进程。</li>
+<li>当类似于磁盘请求的操作完成时,会产生中断。中断处理器弄清楚哪个进程正在等待请求,并将它的状态从阻塞变为就绪。<br>当一个进程调用exit时,中断处理器在PCB中储存退出代码,并将进程的状态变为终止。</li>
+</ul>
+</blockquote>
+</li>
+<li><p>调度</p>
+<blockquote>
+<ul>
+<li>具有较高优先级的进程通常运行较快。</li>
+<li>如果一个进程在时间片结束之前发出请求并被阻塞,就可能是IO密集型程序或交互型程序,优先级应该升高。</li>
+<li>如果一个进程在整个时间片中都运行,就可能是长时间运行的计算密集型程序,优先级应该降低。</li>
+<li>如果一个任务长时间被阻塞,之后变为就绪,它应该提升为最高优先级,便于响应所等待的东西。</li>
+<li>如果进程A在等待进程B的过程中被阻塞,例如,如果它们由管道连接,进程B的优先级应升高。</li>
+<li>系统调用nice允许进程降低(但不能升高)自己的优先级,并允许程序员向调度器传递显式的信息。</li>
+</ul>
+</blockquote>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>os</category>
       </categories>
       <tags>
-        <tag>os</tag>
+        <tag>理论</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>认识操作系统（二）</title>
+    <url>/2020/06/16/%E8%AE%A4%E8%AF%86%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="认识操作系统（二）"><a href="#认识操作系统（二）" class="headerlink" title="认识操作系统（二）"></a>认识操作系统（二）</h2><p>接上文</p>
+<a id="more"></a>
+
+<blockquote>
+<p>认识操作系统系列参考书籍 <a href="https://legacy.gitbook.com/book/wizardforcel/think-os/details" target="_blank" rel="noopener">https://legacy.gitbook.com/book/wizardforcel/think-os/details</a></p>
+</blockquote>
+<h3 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h3><ul>
+<li>缓存考量<blockquote>
+<ul>
+<li>谁在层次结构中上移或下移数据?在结构的顶端,寄存器通常由编译器完成分配。CPU上的硬件管理内存的缓存。在执行程序或打开文件的过程中,用户可以将存储器上的文件隐式移动到内存中。但是操作系统也会将数据从内存移动回存储器。在层次结构的底端,管理员在磁带和磁盘之间显式移动数据。</li>
+<li>移动了什么东西?通常,在结构顶端的块大小比底端要小。在内存的缓存中,通常块大小为128B。内存中的页面可能为4KiB,但是当操作系统从磁盘读取文件时,它可能会一次读10或100个块。</li>
+<li>数据什么时候会移动?在多数的基本的缓存中,数据在首次使用时会移到缓存。但是许多缓存使用一些“预取”机制,也就是说数据会在显式请求之前加载。我们已经见过预取的一些形式了:在请求其一部分时加载整个块。</li>
+<li>缓存中数据在什么地方?当缓存填满之后,我们不把一些东西扔掉就不可能放进一些东西。理想化来说,我们打算保留将要用到的数据,并替换掉不会用到的数据。</li>
+</ul>
+</blockquote>
+</li>
+<li>页面调度<blockquote>
+<ol>
+<li>进程A调用用sbrkmalloc来分配页面。如果堆中没有所请求大小的空闲空间,malloc会调向操作系统请求更多内存。</li>
+<li>如果物理内存中有空闲页,操作系统会将其加载到进程A的页表,创建新的虚拟内存有效范围。</li>
+<li>如果没有空闲页面,调度系统会选择一个属于进程B的“牺牲页面”。它将页面内容从内存复制到磁盘,之后修改进程B的页表来表示这个页面“被换出”了。</li>
+<li>一旦进程B的数据被写入,页面会重新分配给进程A。为了防止进程A读取进程B的数据,页面应被清空。</li>
+<li>此时sbrk的调用可以返回了,向malloc提供堆区额外的空间。之后malloc分配所请求的内存并返回。进程A可以继续执行。</li>
+<li>当进程A执行完毕,或中断后,调度器可能会让进程B继续执行。当它访问到被换出的页面时,内存管理器单元注意到这个页面是“无效”的,并且会触发中断。</li>
+<li>当操作系统处理中断时,它会看到页面被换出了,于是它将页面从磁盘传送到内存。</li>
+<li>一旦页面被换入之后,进程B可以继续执行。</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<h3 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h3><ul>
+<li>地址空间<blockquote>
+<p>主存中的每个字节都由一个“物理地址”整数所指定,物理地址的集合叫做物理“地址空间”。它的范围通常为0到 N-1址是 ,十进制表示为1,073,741,823,16进制表示为0x03ff ffff(前缀2 ** 30 - 1,其中N是主存的大小。在带有1GiB主存的的系统上,最的有效地0x表示十六进制)。</p>
+</blockquote>
+</li>
+<li>内存段<blockquote>
+<ul>
+<li>text段包含程序文本,即程序所组成的机器语言指令<code>靠近内存“底部”,即接近0的地址。</code></li>
+<li>static 段包含由编译器所分配的变量,包括全局变量,和使用  static声明的局部变量。<code>常刚好在text段上面。</code></li>
+<li>stack段包含运行时栈,它由栈帧组成。每个栈帧包含函参数、本地变量以及其它。<code>靠近内存顶部,即接近虚拟地址空间的最大地址。在扩张过程中,它向低地址的方向增长。</code></li>
+<li>heap段包含运行时分配的内存块,通常通过调用C标准函数malloc来分配。<code>通常在static段的上面。在扩张过程中,它向高地址的方向增长</code></li>
+</ul>
+</blockquote>
+</li>
+<li>地址翻译<blockquote>
+<p>虚拟地址(VA)  成物理地址(PA)  内存管理单元(MMU)</p>
+<ol>
+<li>当程序读写变量时,CPU会得到VA。</li>
+<li>MMU将VA分成两部分,称为页码和偏移。“页”是一个内存块,页的大小取决于操作系统和硬件,通常为1~4KiB。</li>
+<li>MMU在“页表”里查找页码,然后获取相应的物理页码。之后它将物理页码和偏移组合得到PA。</li>
+<li>PA传递给主存,用于读写指定地址。</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>os</category>
+      </categories>
+      <tags>
+        <tag>理论</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>认识操作系统（三）</title>
+    <url>/2020/06/16/%E8%AE%A4%E8%AF%86%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%88%E4%B8%89%EF%BC%89/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
