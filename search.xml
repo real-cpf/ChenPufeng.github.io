@@ -284,4 +284,75 @@
         <tag>理论</tag>
       </tags>
   </entry>
+  <entry>
+    <title>octave-matlab-base-01</title>
+    <url>/2020/06/23/octave-matlab-base-01/</url>
+    <content><![CDATA[<h2 id="用octave实现matlab基本功能"><a href="#用octave实现matlab基本功能" class="headerlink" title="用octave实现matlab基本功能"></a>用octave实现matlab基本功能</h2><blockquote>
+<p>参考《精通matlab》</p>
+</blockquote>
+<a id="more"></a>
+
+<ol>
+<li>数学表达式(单行、多行)<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%% calc</span><br><span class="line">(12+2*(7-4))&#x2F;3^2 </span><br><span class="line">%% Multiline input</span><br><span class="line">S&#x3D;1-1&#x2F;2+1&#x2F;3-1&#x2F;4+ ...</span><br><span class="line">1&#x2F;5-1&#x2F;6+1&#x2F;7-1&#x2F;8</span><br></pre></td></tr></table></figure></li>
+<li>常用变量</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%% variable</span><br><span class="line">eps</span><br><span class="line">NaN</span><br><span class="line">realmax</span><br><span class="line">realmin</span><br><span class="line">intmin</span><br><span class="line">intmax</span><br><span class="line"></span><br><span class="line">format short e</span><br><span class="line">RMAd&#x3D;realmax(&#39;double&#39;)		</span><br><span class="line">RMAs&#x3D;realmax(&#39;single&#39;)		</span><br><span class="line">format long e</span><br><span class="line">IMA64&#x3D;intmax(&#39;int64&#39;)			</span><br><span class="line">IMA32&#x3D;intmax					 </span><br><span class="line">IMA32&#x3D;intmax(&#39;int16&#39;)			  </span><br><span class="line">format short e</span><br><span class="line">e1&#x3D;eps							 </span><br><span class="line">e2&#x3D;eps(2)	          </span><br><span class="line">pi</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>操作符</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">a*b</span><br><span class="line">a.*b</span><br><span class="line">a&#x2F;b</span><br><span class="line">a.&#x2F;b</span><br><span class="line">a^b</span><br><span class="line">a.^b</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>复数</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%% complex</span><br><span class="line">z2 &#x3D; 1 + 2 * i				</span><br><span class="line">z3&#x3D;2*exp(i*pi&#x2F;6)			</span><br><span class="line">z&#x3D;z1*z2&#x2F;z3</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>图示z1=4+3i,z2=1+2i 的和</p>
+</blockquote>
+<img src="/2020/06/23/octave-matlab-base-01/tu1.png" class="" title="z1&#x3D;4+3i,z2&#x3D;1+2i">
+
+
+<ol start="5">
+<li>计算sqrt(-8,3)</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%% get sqrt(-8,3)</span><br><span class="line">a&#x3D;-8</span><br><span class="line">r_a&#x3D;a^(1&#x2F;3)</span><br><span class="line"></span><br><span class="line">p&#x3D;[1,0,0,-a]</span><br><span class="line"></span><br><span class="line">R&#x3D;roots(p)</span><br><span class="line"></span><br><span class="line">MR&#x3D;abs(R(1));		%</span><br><span class="line">t&#x3D;0:pi&#x2F;20:2*pi;	%</span><br><span class="line">x&#x3D;MR*sin(t);		</span><br><span class="line">y&#x3D;MR*cos(t);		</span><br><span class="line">plot(x,y,&#39;b:&#39;),grid on		%</span><br><span class="line">								%</span><br><span class="line">hold on</span><br><span class="line">plot(R(2),&#39;.&#39;,&#39;MarkerSize&#39;,30,&#39;Color&#39;,&#39;r&#39;)			%</span><br><span class="line">plot(R([1,3]),&#39;o&#39;,&#39;MarkerSize&#39;,15,&#39;Color&#39;,&#39;b&#39;)	%</span><br><span class="line">axis([-3,3,-3,3]),axis square						%</span><br><span class="line">hold off</span><br></pre></td></tr></table></figure>
+<img src="/2020/06/23/octave-matlab-base-01/tu2.png" class="" title="sqrt(-8,3)">
+
+<ol start="6">
+<li>矩阵</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%% matrix</span><br><span class="line"></span><br><span class="line">AR&#x3D;[1,3;2,4]</span><br><span class="line">AI&#x3D;[1,2</span><br><span class="line">    3,4]</span><br><span class="line"></span><br><span class="line">%% A&#x3D;[1-5i,3-7i</span><br><span class="line">%%    2-6i,4-8i]</span><br><span class="line">%% 实部、虚部、模和幅角</span><br><span class="line">    </span><br><span class="line">AR&#x3D;[1,3;2,4];AI&#x3D;[5,7;6,8];</span><br><span class="line">A&#x3D;AR-AI*i						%</span><br><span class="line"></span><br><span class="line">A_real&#x3D;real(A)</span><br><span class="line">A_image&#x3D;imag(A)  </span><br><span class="line"></span><br><span class="line">for m&#x3D;1:2</span><br><span class="line">for n&#x3D;1:2</span><br><span class="line">		Am1(m,n)&#x3D;abs(A(m,n));</span><br><span class="line">		Aa1(m,n)&#x3D;angle(A(m,n))*180&#x2F;pi;	%</span><br><span class="line">	end</span><br><span class="line">end</span><br><span class="line">Am1,Aa1  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Am2&#x3D;abs(A)</span><br><span class="line">Aa2&#x3D;angle(A)*180&#x2F;pi</span><br></pre></td></tr></table></figure>
+<ol start="7">
+<li>衰减振荡曲线  y=e^(1/3)*sin(3t)  t=[0:4pi]</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">t&#x3D;0:pi&#x2F;50:4*pi;			</span><br><span class="line">y&#x3D;exp(-t&#x2F;3).*sin(3*t);	</span><br><span class="line">plot(t,y,&#39;-r&#39;,&#39;LineWidth&#39;,2)				</span><br><span class="line">axis([0,4*pi,-1,1])</span><br><span class="line">xlabel(&#39;t&#39;),ylabel(&#39;y&#39;)</span><br></pre></td></tr></table></figure>
+
+
+<img src="/2020/06/23/octave-matlab-base-01/tu3.png" class="" title="衰减振荡曲线">
+
+
+<ol start="8">
+<li>函数文档</li>
+</ol>
+<img src="/2020/06/23/octave-matlab-base-01/tu4.png" class="" title="函数文档">
+
+<ol start="9">
+<li>工作变量</li>
+</ol>
+<img src="/2020/06/23/octave-matlab-base-01/tu5.png" class="" title="工作变量">
+
+
+<blockquote>
+<p>octave 代码  <a href="https://github.com/real-cpf/octave-matlab" target="_blank" rel="noopener">https://github.com/real-cpf/octave-matlab</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>math</category>
+      </categories>
+      <tags>
+        <tag>octave</tag>
+      </tags>
+  </entry>
 </search>
