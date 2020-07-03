@@ -366,6 +366,8 @@
 </blockquote>
 <a id="more"></a>
 
+<iframe src="//player.bilibili.com/player.html?aid=371126131&bvid=BV1mZ4y1H7Vp&cid=205668031&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
 <ol>
 <li>一、二、、多维矩阵</li>
 </ol>
@@ -401,6 +403,51 @@
 <li>关系运算与逻辑操作</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">%% 关系运算</span><br><span class="line"></span><br><span class="line">t&#x3D;-3*pi:pi&#x2F;10:3*pi;	</span><br><span class="line">y&#x3D;sin(t).&#x2F;t;			</span><br><span class="line">tt&#x3D;t+(t&#x3D;&#x3D;0)*eps;		</span><br><span class="line">yy&#x3D;sin(tt).&#x2F;tt;		</span><br><span class="line">subplot(1,2,1),plot(t,y),axis([-9,9,-0.5,1.2]),</span><br><span class="line">xlabel(&#39;t&#39;),ylabel(&#39;y&#39;),title(&#39;残缺图形&#39;)</span><br><span class="line">subplot(1,2,2),plot(tt,yy),axis([-9,9,-0.5,1.2])</span><br><span class="line">xlabel(&#39;tt&#39;),ylabel(&#39;yy&#39;),title(&#39;正确图形&#39;)  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">%%  逻辑操作</span><br><span class="line"></span><br><span class="line">A&#x3D;[-2,-1,0,0,1,2,3]</span><br><span class="line">L1&#x3D;~(A&gt;1)				</span><br><span class="line">L2&#x3D;(A&gt;0)&amp;(A&lt;2)	</span><br><span class="line"></span><br><span class="line">A,B&#x3D;[0,-1,1,0,1,-2,-3]</span><br><span class="line">C&#x3D;xor(A,B)	 </span><br><span class="line"></span><br><span class="line">%% sint 削顶半波整流波形 </span><br><span class="line"></span><br><span class="line">clear,t&#x3D;linspace(0,3*pi,500);y&#x3D;sin(t);</span><br><span class="line">z1&#x3D;((t&lt;pi)|(t&gt;2*pi)).*y;					%	&lt;3&gt;</span><br><span class="line">w&#x3D;(t&gt;pi&#x2F;3&amp;t&lt;2*pi&#x2F;3)+(t&gt;7*pi&#x2F;3&amp;t&lt;8*pi&#x2F;3);%	&lt;4&gt;</span><br><span class="line">wn&#x3D;~w;																	%	&lt;5&gt;</span><br><span class="line">z2&#x3D;w*sin(pi&#x2F;3)+wn.*z1;						%	&lt;6&gt;</span><br><span class="line">subplot(4,1,1),plot(t,y,&#39;:r&#39;),axis([0,10,-1.5,1.5])</span><br><span class="line">ylabel(&#39;y&#39;),grid on</span><br><span class="line">subplot(4,1,2),plot(t,z1,&#39;:r&#39;),axis([0,10,-0.2,1.5]),ylabel(&#39;z1&#39;)</span><br><span class="line">subplot(4,1,3),plot(t,wn,&#39;:r&#39;),axis([0,10,-0.2,1.5]),ylabel(&#39;wn&#39;)</span><br><span class="line">subplot(4,1,4),plot(t,z2,&#39;-b&#39;),axis([0,10,-0.2,1.5]),ylabel(&#39;z2&#39;)</span><br><span class="line">xlabel(&#39;t&#39;)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>math</category>
+      </categories>
+      <tags>
+        <tag>octave</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>字符串、胞元和构架数组</title>
+    <url>/2020/07/02/%E5%AD%97%E7%AC%A6%E4%B8%B2%E3%80%81%E8%83%9E%E5%85%83%E5%92%8C%E6%9E%84%E6%9E%B6%E6%95%B0%E7%BB%84/</url>
+    <content><![CDATA[<h2 id="字符串、胞元和构架数组"><a href="#字符串、胞元和构架数组" class="headerlink" title="字符串、胞元和构架数组"></a>字符串、胞元和构架数组</h2><blockquote>
+<p>参考《精通matlab》</p>
+</blockquote>
+<a id="more"></a>
+
+
+
+<img src="/2020/07/02/%E5%AD%97%E7%AC%A6%E4%B8%B2%E3%80%81%E8%83%9E%E5%85%83%E5%92%8C%E6%9E%84%E6%9E%B6%E6%95%B0%E7%BB%84/31.png" class="" title="MATLAB的数据类型">
+
+
+<iframe src="//player.bilibili.com/player.html?aid=201125003&bvid=BV1az411e7cQ&cid=208383204&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<ol>
+<li><p>3.2.1串数组的属性和标识</p>
+<blockquote>
+<p>a=’This is an example.’<br>size(a)<br>a14=a(1:4)<br>ra=a(end:-1:1)<br>Ua=double(a)<br>char(Ua)<br>w=find(a&gt;=’a’&amp;a&lt;=’z’);<br>Ua(w)=Ua(w)-32;<br>char(Ua)<br>A=’这是一个算例。’;<br>A_s=size(A)<br>A56=A([5 6])<br>UCA=double(A)    </p>
+</blockquote>
+</li>
+<li><p>复杂串数组的创建</p>
+<blockquote>
+<p>S=[‘This string array ‘<br>‘has multiple rows.’]<br>size(S) </p>
+</blockquote>
+</li>
+<li><p>串转换函数</p>
+<blockquote>
+<p>S1=char(‘This string array’,’has two rows.’)<br>size(S1)<br>S2=str2mat(‘这’,’字符’,’串数组’,’’,’由4行组成’)<br>size(S2)<br>C1={‘MATLAB201xa includes data types:’;<br>‘◆Double array’;<br>‘◆Character array’;<br>‘and so on’}<br>C1_c=class(C1)<br>size(C1)<br>C2=char(‘MATLAB201xa includes data types:’,…<br>‘◆Double array’,…<br>‘◆Character array’,…<br>‘and so on’)<br>C2_c=class(C2)<br>size(C2)<br>C3=cellstr(C2)<br>size(C3)<br>A=eye(2,4);<br>A_str1=int2str(A)<br>a=rand(2,2);<br>s1=num2str(a)<br>s_s=sprintf(‘%.10e\n’,a)<br>fprintf(‘%.5g\‘,a)<br>s_str2=str2num(s_s)<br>s_sscan=sscanf(s_s,’%f’,[3,2]) </p>
+</blockquote>
+</li>
+<li><p>构架数组域</p>
+<blockquote>
+<p>A(1,1).name=’Wang Pin-pin’; A(1,1).phonenumber=85436789;<br>A(1,2).name={‘Lin Beng-ming’};A(1,2).phonenumber=61125568;<br>A(2,1).name=’Zhang Qing’;A(2,1).phonenumber=83492567;<br>A(2,2).name(2)={‘Yu Dong-jin’};A(2,2).phonenumber(2)=61125569;<br>A(1,3).name={‘Zhao Zhong-xin’};A(1,3).phonenumber=54681123;<br>A(1,3).name(2)={‘Mao Li-xiu’};A(1,3).phonenumber(2)=54681124;<br>disp(‘域名’),disp(fieldnames(A))<br>disp(‘大小’),disp(size(A))  </p>
+</blockquote>
+</li>
+</ol>
+]]></content>
       <categories>
         <category>math</category>
       </categories>
