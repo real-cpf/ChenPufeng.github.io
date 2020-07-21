@@ -455,4 +455,50 @@
         <tag>octave</tag>
       </tags>
   </entry>
+  <entry>
+    <title>数值计算-1</title>
+    <url>/2020/07/21/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97-1/</url>
+    <content><![CDATA[<h2 id="数值计算-1"><a href="#数值计算-1" class="headerlink" title="数值计算-1"></a>数值计算-1</h2><blockquote>
+<p>参考《精通matlab》</p>
+</blockquote>
+<a id="more"></a>
+
+<ol>
+<li><p>数值微积分</p>
+<ul>
+<li><p>求函数极限 </p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">k&#x3D;logspace(0,14,15);	</span><br><span class="line">x&#x3D;k*eps;					</span><br><span class="line">f1&#x3D;(1-cos(2.*x)).&#x2F;x.&#x2F;sin(x)&#x2F;2;</span><br><span class="line">f2&#x3D;sin(x).&#x2F;x;</span><br><span class="line">format short e</span><br><span class="line">disp([blanks(7),&#39;x&#39;,blanks(11),&#39;f1&#39;,blanks(11),&#39;f2&#39;])</span><br><span class="line">disp([x&#39;,f1&#39;,f2&#39;])		</span><br><span class="line">clf							</span><br><span class="line">n1&#x3D;sum(f1&lt;10^-10);		</span><br><span class="line">subplot(2,1,1)</span><br><span class="line">semilogx(x(1:n1),f1(1:n1),&#39;ro&#39;,&#39;LineWidth&#39;,3)				</span><br><span class="line">hold on</span><br><span class="line">semilogx(x(n1+1:end),f1(n1+1:end),&#39;b.-&#39;,&#39;LineWidth&#39;,3)	</span><br><span class="line">hold off</span><br><span class="line">text(10^-14,0.2,&#39;错误区段&#39;),text(10^-6,0.8,&#39;正确区段&#39;)</span><br><span class="line">axis([10^-20,1,0,1.1])</span><br><span class="line">grid on</span><br><span class="line">title(&#39;f2&#39;)</span><br><span class="line">subplot(2,1,2)</span><br><span class="line">semilogx(x,f2,&#39;b.-&#39;,&#39;LineWidth&#39;,3)</span><br><span class="line">axis([10^-20,1,0,1.1])</span><br><span class="line">title(&#39;f1&#39;)</span><br><span class="line">xlabel(&#39;x&#39;)</span><br><span class="line">grid on</span><br><span class="line">shg</span><br></pre></td></tr></table></figure>
+ <img src="/2020/07/21/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97-1/p1.png" class="" title="图1">
+</li>
+<li><p>数值差分</p>
+  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">clf</span><br><span class="line">h&#x3D;0.5;					</span><br><span class="line">x&#x3D;0:h:3;				</span><br><span class="line">f&#x3D;4-(x-2).^2;			</span><br><span class="line">df&#x3D;diff(f);			</span><br><span class="line">gf&#x3D;gradient(f);		</span><br><span class="line">subplot(2,1,1)	</span><br><span class="line">hold on				</span><br><span class="line">plot(x,f,&#39;r.-&#39;)		</span><br><span class="line">x1&#x3D;x(1:end-1);		</span><br><span class="line">plot(x1,df,&#39;bo-&#39;)	</span><br><span class="line">legend(&#39;f&#39;,&#39;df&#39;)		</span><br><span class="line">text(1,3.4,&#39;f3&#39;),text(1.5,4.2,&#39;f4&#39;)		</span><br><span class="line">text(1.05,1.1,&#39;df3&#x3D;f4 - f3&#39;)</span><br><span class="line">axis([-1,4,-2,5])	</span><br><span class="line">xlabel(&#39;x&#39;)			</span><br><span class="line">box on					</span><br><span class="line">hold off				</span><br><span class="line">subplot(2,1,2)	</span><br><span class="line">hold on</span><br><span class="line">plot(x,f,&#39;r.-&#39;)		</span><br><span class="line">plot(x1,df,&#39;bo-&#39;)	</span><br><span class="line">plot(x,gf,&#39;k*-&#39;)		</span><br><span class="line">legend(&#39;f&#39;,&#39;df&#39;,&#39;gf&#39;)</span><br><span class="line">text(0,-0.5,&#39;f1&#39;),text(2.9,2.4,&#39;f7&#39;)</span><br><span class="line">text(-0.45,2.2,&#39;gf1&#x3D;f2 - f1&#39;),text(3,-0.3,&#39;gf7&#x3D;f7 - f6&#39;)</span><br><span class="line">text(0.5,2.3,&#39;f2&#39;),text(1.5,4.2,&#39;f4&#39;)</span><br><span class="line">text(1.05,1.3,&#39;gf3&#x3D;(f4 - f2) &#x2F;2&#39;)</span><br><span class="line">axis([-1,4,-2,5])</span><br><span class="line">xlabel(&#39;x&#39;)</span><br><span class="line">box on</span><br><span class="line">hold off</span><br><span class="line">shg</span><br></pre></td></tr></table></figure>
+  <img src="/2020/07/21/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97-1/p2.png" class="" title="图2"></li>
+<li><p>一元函数积分</p>
+  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">clear</span><br><span class="line">format long</span><br><span class="line">a&#x3D;1.5;</span><br><span class="line">y1&#x3D;@(t)cos(1.&#x2F;(a*t.^2));			</span><br><span class="line">S1&#x3D;quad(y1,0.2,0.3)  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y2&#x3D;@(t)exm040203_chirp(t,a);		</span><br><span class="line">S2&#x3D;quad(y2,0.2,0.3)  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y3&#x3D;inline(&#39;cos(1.&#x2F;(a*t.^2))&#39;,&#39;t&#39;,&#39;a&#39;);	</span><br><span class="line">S3&#x3D;quad(y3,0.2,0.3,[],[],a)  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">format long</span><br><span class="line">f1&#x3D;@(x)sqrt(x);			</span><br><span class="line">f2&#x3D;@(x)x.^3;				</span><br><span class="line">s1&#x3D;quad(f1,0,1);</span><br><span class="line">s2&#x3D;quad(f2,0,1);</span><br><span class="line">S&#x3D;s1-s2  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">f&#x3D;@(x)[sqrt(x),x.^3];	</span><br><span class="line">s&#x3D;quadv(f,0,1);			</span><br><span class="line">Sv&#x3D;s(1)-s(2)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>矩阵计算</p>
+<ul>
+<li>奇异值分解  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">load .&#x2F;mfile&#x2F;exm040303_data</span><br><span class="line">--------------------------------</span><br><span class="line">0.54334	0.44498	0.84237	-0.65633	0.067256</span><br><span class="line">0.6386	0.85166	1.3861	-0.59102	0.078485</span><br><span class="line">-0.13477	-0.21742	-0.45568	0.20241	-0.082092</span><br><span class="line">-0.59188	-0.67615	-1.0381	0.52112	-0.010908</span><br><span class="line">0.049152	0.21892	0.3352	0.0035418	0.030404</span><br><span class="line">0.25843	0.66082	1.0254	-0.1392	0.076908</span><br><span class="line">------------------------------</span><br><span class="line">format short g</span><br><span class="line">[U,S,V]&#x3D;svd(A)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">s&#x3D;diag(S);</span><br><span class="line">n&#x3D;length(s);</span><br><span class="line">plot(1:n,s,&#39;-k&#39;,1:n,s,&#39;.k&#39;,&#39;MarkerSize&#39;,20)</span><br><span class="line">xlabel(&#39;1----&gt;n&#39;)</span><br><span class="line">ylabel(&#39;Sigular values&#39;)</span><br><span class="line">title(&#39;Sigular values of matrix A&#39;) </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">A_rank0&#x3D;rank(A)				</span><br><span class="line">A_null0&#x3D;null(A)  </span><br><span class="line"></span><br><span class="line">dw&#x3D;0.001;					</span><br><span class="line">A_rank_noise&#x3D;rank(A,3*dw*S(1,1)*length(A))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Ar&#x3D;U(:,1:A_rank_noise)*diag(s(1:A_rank_noise))*V(:,1:A_rank_noise)&#39;</span><br><span class="line">df&#x3D;S(4,4)^2+S(5,5)^2		</span><br><span class="line">ds&#x3D;sqrt(df)					</span><br><span class="line">da&#x3D;max(max(abs(A-Ar)))</span><br></pre></td></tr></table></figure>
+   <img src="/2020/07/21/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97-1/p3.png" class="" title="图3"></li>
+</ul>
+</li>
+<li><p>随机变量的产生及其特征描述</p>
+<ul>
+<li>随机数的产生及重现控制  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">r1&#x3D;rand(1,3)				</span><br><span class="line">r2&#x3D;randn(1,4)				</span><br><span class="line">r3&#x3D;randi([-8,8],3,10)	</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">N&#x3D;10000;</span><br><span class="line">a&#x3D;randn(N+2,1);					</span><br><span class="line">A&#x3D;[a(1:N),a(2:N+1),a(3:N+2)];	</span><br><span class="line">A(1:4,:)							</span><br><span class="line">CA&#x3D;cov(A)							</span><br><span class="line">nh&#x3D;7*log10(N);					</span><br><span class="line"></span><br><span class="line">subplot(1,3,1),histfit(A(:,1),nh),title(&#39;A(:,1)&#39;)</span><br><span class="line">subplot(1,3,2),histfit(A(:,2),nh),title(&#39;A(:,2)&#39;)</span><br><span class="line">subplot(1,3,3),histfit(A(:,3),nh),title(&#39;A(:,3)&#39;)  </span><br><span class="line"></span><br><span class="line">clear</span><br><span class="line">RS&#x3D;RandStream(&#39;mlfg6331_64&#39;);	</span><br><span class="line">N&#x3D;10000;</span><br><span class="line">A1&#x3D;zeros(3,5);AA1&#x3D;A1;</span><br><span class="line">B&#x3D;zeros(N,3);</span><br><span class="line">for k&#x3D;1:3</span><br><span class="line">    set(RS,&#39;Substream&#39;,k)		</span><br><span class="line">    A1(k,:)&#x3D;rand(RS,1,5);		</span><br><span class="line">    B(:,k)&#x3D;rand(RS,N,1);		</span><br><span class="line">end</span><br><span class="line">for k&#x3D;1:3</span><br><span class="line">    set(RS,&#39;Substream&#39;,k)</span><br><span class="line">    AA1(k,:)&#x3D;rand(RS,1,5);</span><br><span class="line">end</span><br><span class="line">A1,AA1</span><br><span class="line">rA&#x3D;corrcoef(B)					</span><br><span class="line">nh&#x3D;5*log10(N);					</span><br><span class="line">subplot(1,3,1),hist(B(:,1),nh),title(&#39;B(:,1)&#39;)</span><br><span class="line">subplot(1,3,2),hist(B(:,2),nh),title(&#39;B(:,2)&#39;)</span><br><span class="line">subplot(1,3,3),hist(B(:,3),nh),title(&#39;B(:,3)&#39;)</span><br></pre></td></tr></table></figure>
+  <img src="/2020/07/21/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97-1/p4.png" class="" title="图4"></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>未完待续……</li>
+</ul>
+]]></content>
+      <categories>
+        <category>math</category>
+      </categories>
+      <tags>
+        <tag>octave</tag>
+      </tags>
+  </entry>
 </search>
